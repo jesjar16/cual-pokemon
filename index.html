@@ -11,7 +11,7 @@
     <script>
          $(document).ready(function(){
             var pokemon_api_url= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/";
-            //"num".png
+
             var pokemon_images= '';
 
             for (var i=1; i<=151; i++){
@@ -23,8 +23,6 @@
            
             // Llamada a API una vez cargada la página, al hacer click en Pokemon
             $('img').on('click', function(){
-                console.log('Pinchó imagen');
-                //$(this).attr('id');
                 console.log('Id',$(this).attr('id'));
                 var pokeid= $(this).attr('id');
                 apiCall(pokeid);
@@ -50,9 +48,6 @@
                         $("#pokemon-detail").html(html_str);
                     }, "json");
             }
-
-
-
          });
     </script>
 </head>
